@@ -1,5 +1,249 @@
+$color-white: #F7F7F7;
+$color-black: #484848;
+$color-grey: #f1f0f0;
+$color-dark-green: #406959;
+$color-green: #4E816D;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: $color-black;
+    font-size: 24px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 15px;
+}
+
+.wrapper__element {
+    width: 40%;
+}
+
+.wrapper__element--img {
+    text-align: center
+}
+
+.wrapper__about-me {
+    align-items: flex-start;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 150px;
+    padding: 75px 0;
+    background-color: $color-grey;
+    border-right: 1px solid $color-dark-green;
+    z-index: 1;
+}
+
+.nav__logo {
+    height: 75px;
+    position: absolute;
+    top: 50px;
+}
+
+.nav__element {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: $color-black;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+.header {
+    background-image: url("../img/background1.png");
+    background-position: center;
+    margin-left: 150px;
+    padding: 50px 0;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.social-media__icon {
+    text-decoration: none;
+    color: $color-green;
+    font-size: 35px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-green;
+        color: $color-grey;
+    }
+}
+
+.header__title {
+    font-family: 'Open Sans', sans-serif;
+    color: $color-green;
+    font-size: 65px;
+    position: relative;
+}
+
+.header__description {
+    position: relative;
+    color: $color-white;
+    background-color: $color-black;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -85px;
+        left: -40px;
+        background-color: $color-white;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+
+.header__img {
+    width: 100%;
+}
+
+.about-me {
+    background-image: url("../img/background2.png");
+    background-position: center;
+    margin-left: 150px;
+    padding: 50px 0;
+}
+
+.about-me__img {
+    width: 110%;
+}
+
+.about-me__title {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.skills {
+    margin: 0 15px;
+}
+
+.skills__element {
+    text-align: left;
+    list-style-type: none;
+
+    & > .fab, .fas {
+        font-size: 26px;
+        padding-right: 20px;
+    }
+
+    & > .iconify {
+        font-size: 26px;
+    }
+
+    & > th {
+        font-weight: 300;
+    }
+}
+
+.interests__element {
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+.job__title {
+    font-size: 26px;
+    margin: 0 15px;
+}
+
+.job__subtitle {
+    font-size: 16px;
+    margin: 0 15px;
+}
+
+.job__description {
+    margin: 0 15px;
+}
+
+.about-me__decoration {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $color-white;
+        position: absolute;
+    }
+    
+    &::before {
+        top: -10px;
+        left: 10px;
+    }
+
+    &::after {
+        top: 10px;
+        left: -10px;
+    }
+}
+
+.about-me__decoration--background-green {
+    background-color: $color-green;
+    color: $color-white;
+
+    &::before, &::after {
+        border: 1px solid $color-black;
+    }
+}
+
+.about-me__decoration--background-white {
+    background-color: $color-white;
+    color: $color-black;
+
+    &::before, &::after {
+        border: 1px solid $color-black;
+    }
 }
