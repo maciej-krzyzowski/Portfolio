@@ -1,8 +1,10 @@
 $color-white: #F7F7F7;
 $color-black: #484848;
-$color-grey: #f1f0f0;
-$color-dark-green: #406959;
+$color-grey: #e9e7e7;
+$color-dark-green: #2c503b;
 $color-green: #4E816D;
+
+// GLOBAL
 
 * {
     box-sizing: border-box;
@@ -14,7 +16,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     color: $color-black;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .container {
@@ -27,7 +29,15 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 75px 15px;
+    padding: 50px 15px;
+}
+
+.wrapper__about-me {
+    align-items: flex-start;
+}
+
+.wrapper__projects {
+    align-items: flex-start;
 }
 
 .wrapper__element {
@@ -38,9 +48,72 @@ body {
     text-align: center
 }
 
-.wrapper__about-me {
-    align-items: flex-start;
+.wrapper__element--project {
+    text-align: center;
 }
+
+.wrapper__element--contact {
+    width: 45%;
+}
+
+.section__title {
+    font-size: 54px;
+    margin-bottom: 50px;
+    color: $color-green;
+}
+
+.decoration {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $color-white;
+        position: absolute;
+    }
+    
+    &::before {
+        top: -10px;
+        left: 10px;
+    }
+
+    &::after {
+        top: 10px;
+        left: -10px;
+    }
+}
+
+.decoration__background--green {
+    background-color: $color-green;
+    color: $color-white;
+
+    &::before, &::after {
+        border: 1px solid $color-black;
+    }
+}
+
+.decoration__background--white {
+    background-color: $color-white;
+    color: $color-black;
+
+    &::before, &::after {
+        border: 1px solid $color-black;
+    }
+}
+
+.decoration__background--black {
+    &::before, &::after {
+        border: 1px solid $color-green;
+    }
+}
+
+// PROJECT
 
 .nav {
     position: fixed;
@@ -52,7 +125,6 @@ body {
     width: 150px;
     padding: 75px 0;
     background-color: $color-grey;
-    border-right: 1px solid $color-dark-green;
     z-index: 1;
 }
 
@@ -82,6 +154,8 @@ body {
 .header {
     background-image: url("../img/background1.png");
     background-position: center;
+    display: flex;
+    align-items: center;
     margin-left: 150px;
     padding: 50px 0;
     height: 100vh;
@@ -94,13 +168,15 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    position: absolute;
+    right: 50px;
+    top: 25px;
 }
 
 .social-media__icon {
     text-decoration: none;
     color: $color-green;
-    font-size: 35px;
+    font-size: 45px;
     padding: 10px 20px;
     margin: 0 5px;
     border-radius: 10px;
@@ -123,16 +199,17 @@ body {
 .header__description {
     position: relative;
     color: $color-white;
+    font-size: 24px;
+    line-height: 1.2;
     background-color: $color-black;
     padding: 15px;
     border-radius: 5px;
-    line-height: 1.2;
 
     &::before {
         content: "";
         position: absolute;
         top: -85px;
-        left: -40px;
+        left: -20px;
         background-color: $color-white;
         border-radius: 5px;
         width: 100%;
@@ -154,16 +231,16 @@ body {
 }
 
 .about-me__img {
-    width: 110%;
+    width: 100%;
 }
 
 .about-me__title {
-    font-size: 45px;
-    margin-bottom: 25px;
+    font-size: 35px;
+    margin: 25px 15px;
 }
 
 .skills {
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
 .skills__element {
@@ -186,64 +263,132 @@ body {
 
 .interests__element {
     list-style-type: none;
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
 .job__title {
-    font-size: 26px;
+    font-size: 24px;
     margin: 0 15px;
 }
 
 .job__subtitle {
-    font-size: 16px;
-    margin: 0 15px;
+    font-size: 15px;
+    display: block;
+    margin: 0 15px 10px;
 }
 
 .job__description {
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
-.about-me__decoration {
-    background-color: $color-black;
-    color: $color-white;
-    padding: 20px;
+.projects {
+    background-image: url("../img/background1.png");
+    background-position: center;
+    margin-left: 150px;
+    padding: 50px 0;
+}
+
+.projects__img {
+    width: 100%;
+}
+
+.project__img {
+    width: 100%;
     border-radius: 5px;
     position: relative;
-
-    &::before, &::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        border-radius: 5px;
-        border: 1px solid $color-white;
-        position: absolute;
-    }
-    
-    &::before {
-        top: -10px;
-        left: 10px;
-    }
-
-    &::after {
-        top: 10px;
-        left: -10px;
-    }
+    z-index: 1;
 }
 
-.about-me__decoration--background-green {
-    background-color: $color-green;
+.project__description {
     color: $color-white;
+    font-size: 22px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
 
-    &::before, &::after {
-        border: 1px solid $color-black;
+.project__description--black {
+    color: $color-black;
+}
+
+.project__btn {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 500;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 12px;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-black;
+        border-color: $color-black;
     }
 }
 
-.about-me__decoration--background-white {
-    background-color: $color-white;
+.project__btn--black {
     color: $color-black;
 
-    &::before, &::after {
-        border: 1px solid $color-black;
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
     }
+}
+
+.project__btn--white {
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.contact {
+    background-image: url("../img/background2.png");
+    background-position: center;
+    margin-left: 150px;
+    padding: 50px 0;
+    height: 95vh;
+}
+
+.contact__element {
+    list-style-type: none;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.contact__link {
+    text-decoration: none;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    font-size: 26px;
+
+    & > .fas, .far, .fab {
+        font-size: 40px;
+        min-width: 55px;
+    }
+
+    &:hover {
+        color: $color-dark-green;
+    }
+}
+
+.contact__img {
+    width: 75%;
+}
+
+.footer {
+    height: 5vh;
+    background-color: $color-grey;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
 }
