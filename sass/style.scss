@@ -21,7 +21,7 @@
 
 .nav__element {
     margin: 15px 0;
-    padding: 10px;
+    padding: 15px 10px;
     border-radius: 10px;
     font-size: 20px;
     color: $color-black;
@@ -68,7 +68,7 @@
 
 .social-media__icon {
     text-decoration: none;
-    color: $color-black;
+   color: $color-black;
     font-size: 30px;
     padding: 8px 12px;
     margin: 0 10px;
@@ -93,6 +93,8 @@
 .header__description {
     position: relative;
     color: $color-white;
+    font-size: 25px;
+    line-height: 1.4;
     background-color: $color-black;
     padding: 18px;
     border-radius: 10px;
@@ -100,7 +102,7 @@
     &::before {
         content: "";
         position: absolute;
-        top: -85px;
+        top: -80px;
         left: -15px;
         background-color: $color-white;
         border-radius: 10px;
@@ -199,23 +201,14 @@
     cursor: pointer;
 
     &:hover {
-        background-color: $color-black;
-        border-color: $color-black;
-    }
-}
-
-.project__btn--black {
-    color: $color-black;
-
-    &:hover {
-        background-color: $color-black;
-        color: $color-white;
+        background-color: $color-white;
+        border-color: $color-white;
+        color: $color-green;
     }
 }
 
 .project__btn--white {
     &:hover {
-        background-color: $color-white;
         color: $color-black;
     }
 }
@@ -254,9 +247,13 @@
 
 .footer {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5vh;
+    width: 100%;
+    text-align: right;
+    padding: 0 25px;
 }
 
 @media(max-width: 1200px) {
@@ -319,16 +316,12 @@
 
     .header__description {
         &::before {
-            top: -65px
+            top: -65px;
         }
     }
 
     .about-me__title {
         font-size: 25px;
-    }
-
-    .skills {
-        margin: 0 15px
     }
 
     .job__title {
@@ -337,6 +330,10 @@
 
     .job__subtitle {
         font-size: 10px;
+    }
+
+    .skills {
+        margin: 0 15px
     }
 
     .contact {
@@ -355,10 +352,6 @@
             font-size: 34px;
             min-width: 40px;
         }
-    }
-
-    .footer {
-        z-index: 1;
     }
 }
 
@@ -399,19 +392,7 @@
         }
     }
 
-    .header__description {
-        left: 8px;
-    
-        &::before {
-            left: -14px;
-        }
-    }
-
     .project__description--black {
-        color: $color-white;
-    }
-
-    .project__btn--black {
         color: $color-white;
     }
 
@@ -423,11 +404,6 @@
         font-size: 10px;
     }
 
-    .contact {
-        height: 100vh;
-        padding-bottom: 0;
-    }
-
     .contact__img {
         display: none;
     }
@@ -437,11 +413,17 @@
     }
 
     .footer {
-        color: $color-black
+        text-align: center;
     }
 }
 
 @media(max-width: 576px) {
+    .nav__element {
+        margin: 10px 0;
+        padding: 12px 8px;
+        font-size: 18px;
+    }
+
     .social-media__icon {
         font-size: 25px;
     }
@@ -451,16 +433,22 @@
     }
 
     .header__description {
+        font-size: 16px;
         line-height: 1.3;
 
         &::before {
-            top: -50px;
+            top: -45px;
         }
     }
 
     .project__description {
         font-size: 18px;
         padding: 10px;
+    }
+
+    .contact {
+        height: 100vh;
+        padding-bottom: 0;
     }
 
     .contact__link {
@@ -492,7 +480,6 @@
     }
 
     .header__description {
-        font-size: 14px;
         line-height: 1.3;
 
         &::before {
@@ -506,10 +493,6 @@
 
     .project__description {
         font-size: 16px;
-    }
-
-    .contact {
-        height: auto;
     }
 
     .contact__link {
