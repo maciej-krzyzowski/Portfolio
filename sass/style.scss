@@ -94,7 +94,6 @@
     position: relative;
     color: $color-white;
     font-size: 25px;
-    line-height: 1.4;
     background-color: $color-black;
     padding: 18px;
     border-radius: 10px;
@@ -316,6 +315,7 @@
 
     .header__description {
         left: 7.5px;
+        font-size: 22px;
 
         &::before {
             top: -65px;
