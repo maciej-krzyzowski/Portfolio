@@ -35,8 +35,8 @@ body {
         &::before {
         content: "";
         position: absolute;
-        top: 0px;
         background-color: $color-green;
+        top: 0px;
         width: 50%;
         height: 100%;
         z-index: -1;
@@ -204,7 +204,7 @@ body {
     
     .wrapper__element {
         width: 100%;
-        margin: 35px 0;
+        margin: 30px 0;
     }
 
     .section__title--contact {
@@ -265,6 +265,19 @@ body {
         width: 95%;
         margin: 0 auto;
     }
+
+    .decoration {
+        &::before {
+            top: -7px;
+            left: 7px;
+        }
+    
+        &::after {
+            top: 7px;
+            left: -7px;
+        }
+    }
+    
 }
 
 @media (max-width: 350px) and (max-height: 570px) {

@@ -213,7 +213,8 @@
 }
 
 .contact {
-    height: 100vh;
+    max-height: 100vh;
+    position: relative;
 }
 
 .contact__element {
@@ -419,6 +420,7 @@
     }
 
     .footer {
+        background-color: $color-white;
         text-align: center;
     }
 }
@@ -476,7 +478,7 @@
 @media (min-width: 576px) and (max-width: 992px) and (max-height: 420px) {
     .header, .about-me, .projects, .contact {
         height: auto;
-        padding-top: 75px;
+        padding-top: 50px;
     }
 
     .nav__element {
