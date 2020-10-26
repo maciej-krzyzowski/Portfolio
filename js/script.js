@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const hamburgerBtn = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll('.nav__element');
@@ -12,15 +13,19 @@ const removeActiveClassToNav = () => {
     activeLink.classList.remove('nav__element--active');
 }
 
-const eventsListener = () => {
+const activateNav = () => {
+    hamburgerBtn.classList.toggle("is-active");
+    nav.classList.toggle('nav__active');
+    body.classList.toggle('overflow');
+}
+
+const actions = () => {
     hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle("is-active");
-        nav.classList.toggle('nav__active');
+        activateNav();
     });
 
     nav.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle("is-active");
-        nav.classList.toggle('nav__active');
+        activateNav();
     });
 
     window.addEventListener('scroll', () => {
@@ -37,9 +42,9 @@ const eventsListener = () => {
             navLinks[2].classList.add('nav__element--active');
         } else if (scrollWindow >= sectionContact.offsetTop - halfWindowHeight && !navLinks[3].classList.contains('nav__element--active')) {
             removeActiveClassToNav();
-            navLinks[3].classList.add('nav__element--active')
-        }
+            navLinks[3].classList.add('nav__element--active');
+        };
     });
 }
 
-eventsListener();
+actions();

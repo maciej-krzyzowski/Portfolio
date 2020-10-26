@@ -165,8 +165,9 @@ body { font-family: 'Ubuntu', sans-serif; font-weight: 300; color: #484848; font
   .contact__link { font-size: 22px; }
   .contact__link > .fas, .contact__link .far, .contact__link .fab { font-size: 35px; min-width: 45px; } }
 
-@media (max-width: 992px) { .nav { width: 50vw; left: -50vw; transition: 0.5s; }
-  .nav__active { transform: translateX(50vw); }
+@media (max-width: 992px) { .overflow { overflow: hidden; }
+  .nav { width: 50vw; left: -50vw; transition: 0.5s; }
+  .nav__active { overflow: hidden; transform: translateX(50vw); }
   .nav__element { font-size: 24px; }
   .hamburger { display: block; }
   .header__title { font-size: 45px; }

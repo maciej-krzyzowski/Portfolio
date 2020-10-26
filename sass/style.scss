@@ -288,6 +288,10 @@
 }
 
 @media(max-width: 992px) {
+    .overflow {
+        overflow: hidden;
+    }
+
     .nav {
         width: 50vw;
         left: -50vw;
@@ -295,6 +299,7 @@
     }
 
     .nav__active {
+        overflow: hidden;
         transform: translateX(50vw);
     }
 
