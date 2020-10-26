@@ -68,7 +68,7 @@
 
 .social-media__icon {
     text-decoration: none;
-   color: $color-black;
+    color: $color-black;
     font-size: 30px;
     padding: 8px 12px;
     margin: 0 10px;
@@ -170,8 +170,6 @@
 .project__img {
     width: 100%;
     border-radius: 10px;
-    position: relative;
-    z-index: 1;
 }
 
 .project__description {
@@ -179,8 +177,6 @@
     font-size: 22px;
     padding: 5px 10px;
     border-radius: 10px;
-    position: relative;
-    z-index: 1;
 }
 
 .project__description--black {

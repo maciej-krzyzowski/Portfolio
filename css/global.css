@@ -83,6 +83,11 @@ body {
   position: relative;
 }
 
+.decoration * {
+  position: relative;
+  z-index: 1;
+}
+
 .decoration::before, .decoration::after {
   content: '';
   height: 100%;
@@ -90,6 +95,7 @@ body {
   border-radius: 5px;
   border: 1px solid #F7F7F7;
   position: absolute;
+  background: none;
 }
 
 .decoration::before {
