@@ -264,7 +264,7 @@
     .header__title {
         font-size: 55px;
     }
-    
+
     .about-me__title {
         font-size: 28px;
     }
@@ -279,7 +279,7 @@
 
     .contact__link {
         font-size: 22px;
-    
+
         & > .fas, .far, .fab {
             font-size: 35px;
             min-width: 45px;
@@ -306,7 +306,7 @@
     .nav__element {
         font-size: 24px;
     }
-    
+
     .hamburger {
         display: block;
     }
@@ -347,7 +347,7 @@
 
     .contact__link {
         font-size: 20px;
-    
+
         & > .fas, .far, .fab {
             font-size: 34px;
             min-width: 40px;
@@ -382,10 +382,10 @@
         right: 30px;
         top: 30px;
     }
-    
+
     .social-media__icon {
         color: $color-white;
-    
+
         &:hover {
             background-color: $color-white;
             color: $color-green;
@@ -520,5 +520,20 @@
 
     .contact__link {
         font-size: 14px;
+    }
+}
+
+@media (max-height: 650px) {
+
+    .contact {
+        height: auto;
+        max-height: none;
+    }
+}
+
+@media (max-height: 400px) {
+
+    .header {
+        padding-top: 75px;
     }
 }
